@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الإجازات المرضية</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --primary:#3f6fa8;
+    --primary-btn:#3b6fa8;
+    --primary-btn-2:#4f83bc;
+    --text-main:#3f6fa8;
+    --text-gray:#7f8c99;
+    --input-border:#d9dee5;
+    --bg:#f4f6f9;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo',sans-serif;
+}
+
+body{
+    background:var(--bg);
+}
+
+/* ===== HEADER ===== */
+header{
+    height:70px;
+    background:#f7f9fb;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 22px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-weight:700;
+    font-size:18px;
+}
+
+.logo-ar{
+    color:#2c3e50;
+}
+
+.logo-en{
+    color:#7b8b99;
+    font-weight:600;
+}
+
+.menu{
+    width:24px;
+    height:2px;
+    background:#98a6b5;
+    position:relative;
+}
+
+.menu::before,
+.menu::after{
+    content:"";
+    position:absolute;
+    right:0;
+    width:24px;
+    height:2px;
+    background:#98a6b5;
+}
+
+.menu::before{ top:-7px; }
+.menu::after{ top:7px; }
+
+/* ===== MAIN ===== */
+.main{
+    padding:55px 24px 40px;
+    text-align:center;
+}
+
+.main h1{
+    font-size:34px;
+    font-weight:800;
+    color:var(--text-main);
+    margin-bottom:20px;
+    letter-spacing:.3px;
+}
+
+.main p{
+    font-size:18px;
+    line-height:1.9;
+    color:var(--text-gray);
+    margin-bottom:45px;
+}
+
+/* ===== FORM ===== */
+.form{
+    max-width:420px;
+    margin:auto;
+}
+
+.input{
+    width:100%;
+    height:60px;
+    border-radius:16px;
+    border:2px solid var(--input-border);
+    padding:0 22px;
+    font-size:18px;
+    background:#f9fbfd;
+    margin-bottom:22px;
+    outline:none;
+    transition:all .15s ease;
+}
+
+/* مطابق للإطار الأسود السميك */
+.input:focus{
+    border:3px solid #000;
+    background:white;
+}
+
+/* ===== BUTTONS ===== */
+.btn{
+    width:72%;
+    height:56px;
+    border-radius:16px;
+    border:none;
+    font-size:20px;
+    font-weight:600;
+    margin:14px auto;
+    display:block;
+    cursor:pointer;
+    transition:all .2s ease;
+}
+
+.btn-primary{
+    background:var(--primary-btn);
+    color:white;
+}
+
+.btn-primary:active{
+    transform:scale(.98);
+}
+
+.btn-secondary{
+    background:var(--primary-btn-2);
+    color:white;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    margin-top:70px;
+    background:var(--primary);
+    height:200px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.footer-content{
+    text-align:center;
+    color:white;
+}
+
+.footer-logo{
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.footer-en{
+    font-size:20px;
+    font-weight:600;
+    opacity:.95;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="menu"></div>
+    <div class="logo">
+        <span class="logo-ar">صحة</span>
+        <span class="logo-en">Seha</span>
+    </div>
+</header>
+
+<section class="main">
+
+    <h1>الإجازات المرضية</h1>
+
+    <p>
+        خدمة الاستعلام عن الإجازات المرضية تتيح لك الاستعلام
+        عن حالة طلب الإجازة ويمكنك طباعتها عن طريق تطبيق صحتي
+    </p>
+
+    <div class="form">
+        <input class="input" type="text" placeholder="رمز الخدمة">
+        <input class="input" type="text" placeholder="رقم الهوية / الإقامة">
+
+        <button class="btn btn-primary">استعلام</button>
+        <button class="btn btn-secondary">رجوع للاستعلامات</button>
+    </div>
+
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">صحة</div>
+        <div class="footer-en">Seha ✓</div>
+    </div>
+</footer>
+
+</body>
+</html>
